@@ -52,3 +52,91 @@ egg
 ```
 
 NVM node version manager -> Simple batch script to manage multiple active node.js versions
+
+
+### REPL Mode
+
+Read -> Eval -> Print -> Loop
+
+### Hotleys
+
+_.help_ for help
+_double tab_, give you a list of possible tings you can type. Work also empty
+_ give you the last val used
+
+### Timers
+
+setTimeout
+setInterval
+
+_setTimeout_ after 0 mls, does not mean execute it right away, but rather it means execute right away after you are done with everything in this script.
+_setTimeout delay_ is not a guaranteed thing. But rather a minimum thing. 
+
+### Node's CLI 
+
+_node -h_ print interface options of node cli
+
+### Enviroment variables
+
+``` bash
+$ node_debug="http" node 1-hello_world.js
+
+# Server is running
+# HTTP 7960: SERVER new http connection
+# HTTP 7960: SERVER new http connection
+# HTTP 7960: write ret = true
+# HTTP 7960: outgoing message end.
+# HTTP 7960: SERVER socketOnParserExecute 435
+# HTTP 7960: write ret = true
+# HTTP 7960: outgoing message end.
+# HTTP 7960: SERVER socketOnParserExecute 420
+# HTTP 7960: server socket close
+
+```
+
+``` bash
+val1=10 val2=20 node 9-custom-env-variables.js
+
+export val1=100
+export val2=200
+
+node 9-custom-env-variables.js
+```
+
+_it can be used for ser dynamics values like ports for diferents enviroments_
+
+### Positional arguments
+
+_process.argv_
+
+``` bash
+node -p "process.argv" hello bye
+
+# [ 'C:\\Program Files\\nodejs\\node.exe', 'hello', 'bye' ]
+# node script.js [arguments]
+```
+### Standar input ouput streams
+
+``` bash
+node -p "process"
+
+# ...
+# stdout -> output
+# stderr -> error
+# stdinn -> input
+
+# These control the communication channel between the Node process and its operation system execution enviroment
+
+```
+_(node cli)_
+
+``` javascript
+process.stdout.write('hello\n');
+
+/** 
+ * hello
+ * true
+ */
+
+``` 
+
