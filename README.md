@@ -140,3 +140,15 @@ process.stdout.write('hello\n');
 
 ``` 
 
+### Debugger
+
+Node comes with a built-in debugger utility, but is very limited.
+The cool thing about Node  debugger, is that is beautifully integrated with __Chrome Dev Tools__
+
+``` bash
+    node --inspect-brk 04-bug.js
+``` 
+
+Go to crhome and open a new tab in chrome://inspect/#devices nad
+click on the inspect link on your node process
+
